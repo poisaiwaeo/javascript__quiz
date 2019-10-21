@@ -16,29 +16,94 @@ const scoreDiv = document.getElementById("scoreContainer");
 let questions = [
 
     {
-        question: "What does HTML stand for?",
-        imgSrc: "images/html.png",
+        question: "Hvor udbredt pandaerne fra?",
+        imgSrc: "images/panda01.jpg",
         choiceA: "Correct",
         choiceB: "Wrong",
         choiceC: "Wrong",
         correct: "A"
     },
     {
-        question: "What does css stand for?",
-        imgSrc: "images/css.png",
+        question: "Hvor meget vejer en panda?",
+        imgSrc: "images/panda02.jpg",
         choiceA: "Wrong",
         choiceB: "Correct",
         choiceC: "Wrong",
         correct: "B"
     },
     {
-        question: "What does JS stand for?",
-        imgSrc: "images/js.png",
+        question: "Hvor høj er panda?",
+        imgSrc: "images/panda02.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
         correct: "C"
-    }
+    },
+    {
+        question: "Hvilken farver har den?",
+        imgSrc: "images/panda03.jpg",
+        choiceA: "Correct",
+        choiceB: "Wrong",
+        choiceC: "Wrong",
+        correct: "A"
+    },
+    {
+        question: "Hvornår er panda drægtighedsperiode?",
+        imgSrc: "images/panda04.jpg",
+        choiceA: "Wrong",
+        choiceB: "Wrong",
+        choiceC: "Correct",
+        correct: "C"
+    },
+    {
+        question: "Hvad lever pandaerne af?",
+        imgSrc: "images/panda05.jpg",
+        choiceA: "Wrong",
+        choiceB: "Correct",
+        choiceC: "Wrong",
+        correct: "B"
+    },
+    {
+        question: "Hvornår fødes de deres unger?",
+        imgSrc: "images/panda06.jpg",
+        choiceA: "Wrong",
+        choiceB: "Correct",
+        choiceC: "Wrong",
+        correct: "B"
+    },
+    {
+        question: "Hvordan passer man panda?",
+        imgSrc: "images/panda07.jpg",
+        choiceA: "Wrong",
+        choiceB: "Wrong",
+        choiceC: "Correct",
+        correct: "C"
+    },
+    {
+        question: "Hvor længe sover panda?",
+        imgSrc: "images/panda08.jpg",
+        choiceA: "Correct",
+        choiceB: "Wrong",
+        choiceC: "Wrong",
+        correct: "A"
+    },
+    {
+        question: "Hvor gammel kan panda bliver?",
+        imgSrc: "images/panda09.jpg",
+        choiceA: "Correct",
+        choiceB: "Wrong",
+        choiceC: "Wrong",
+        correct: "A"
+    },
+    {
+        question: "Kan man se panda i zoologisk have i Danmark?",
+        imgSrc: "images/panda10.jpg",
+        choiceA: "Wrong",
+        choiceB: "Correct",
+        choiceC: "Wrong",
+        correct: "B"
+    },
+        
 ];
 
 
