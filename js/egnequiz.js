@@ -109,10 +109,10 @@ let questions = [
 
 
 //create some variables
-const lastQuestion = questions.length - 1;
+const lastQuestion = questions.length - 1; //Den trækker 1 fra fordi javascript starter fra 0.
 let runningQuestion = 0;
 let count = 0;
-const questionTime = 10; //10s
+const questionTime = 8; //10s = hvor mange sekunder man har til at svare.
 const gaugeWidth = 150; //150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
@@ -141,6 +141,7 @@ function renderProgress() {
     }
 }
 
+//Når man klikker på start, så den kører den i gange.
 start.addEventListener("click", startQuiz);
 
 
@@ -151,7 +152,7 @@ function startQuiz() {
     quiz.style.display = "block";
     renderProgress();
     renderCounter();
-    TIMER = setInterval(renderCounter, 1000); //1000ms = 1s
+    TIMER = setInterval(renderCounter, 1000); //1000ms = 1s. Her tæller det ned hvor langt tide man har til at svare og kalder renderCounter.
 }
 
 
@@ -168,9 +169,10 @@ function renderCounter() {
     //nustille farver på svare til spørgsmål
     else {
         count = 0;
+        //Hvis det spørgsmål vi er nåået til er mindre end antal spørgsmål i alt.
         //change progess color to red
         answerIsWrong();
-        if (runningQuestion < lastQuestion) {
+        if (runningQuestion < lastQuestion) { //lægger 1 til det spørgsmpl vi er nået til.
             runningQuestion++;
             renderQuestion();
         }
@@ -183,7 +185,7 @@ function renderCounter() {
 }
 
 
-// checkAnwser
+// checkAnwser 
 
 function checkAnswer(answer) {
 
@@ -207,7 +209,7 @@ function checkAnswer(answer) {
     else {
         // end the quiz and show the score
         clearInterval(TIMER);
-        scoreRender();
+        scoreRender(); //Smiley der bliver vist, det ligger nede i scoreRender.
     }
 }
 
@@ -223,7 +225,7 @@ function answerIsWrong() {
 }
 
 
-// score render
+// score render - Smiley bliver vise frem, hvor mange procent man har svare rigtig.
 function scoreRender() {
     scoreDiv.style.display = "block";
 
@@ -231,7 +233,8 @@ function scoreRender() {
     const scorePerCent = Math.round(100 * score / questions.length);
 
     //choose to the image based on the scorePerCent 
-    let img = (scorePerCent >= 80) ? "images/5.png" :
+    let img = (scorePerCent >= 100) ? "images/win.jpg" :
+              (scorePerCent >= 80) ? "images/5.png" :
               (scorePerCent >= 60) ? "images/4.png" : 
               (scorePerCent >= 40) ? "images/3.png" : 
               (scorePerCent >= 20) ? "images/2.png" : 
